@@ -8,12 +8,11 @@ from keras_preprocessing import image
 herbs_category = ['alovara', 'bilin', 'jack', 'lemon', 'Pepaya']
 
 # load the save model
-model = tf.keras.models.load_model(
-    'D:/4th_Semester/Project/3.Other_Matirials/MlModHost/herbs.h5')
+model = tf.keras.models.load_model('herbs.h5')
 
 # print(model.summary())
 
-img_path = "D:/4th_Semester/Project/3.Other_Matirials/MlModHost/bo.jpg"
+img_path = "bo.jpg"
 # E:/F_PROJECTS/DataSet/test/Pepaya/Pepaya170.jpg
 
 test_image = image.load_img(img_path, target_size=(224, 224))
@@ -43,3 +42,5 @@ elif result[0][4] == 1:
     print("The herb is Lemon")
 else:
     print("Cant find !")
+
+
